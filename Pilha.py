@@ -1,5 +1,7 @@
-#Pilha: É uma estrutura em que você literalmente empilh os elementos. O último a entrar vai ser o primeiro a sair. Um exemplo pode ser
-#uma pilha de camisetas.
+#Pilha: É uma estrutura em que você literalmente empilha os elementos. O último a entrar vai ser o primeiro a sair e vice versa. Um
+#exemplo pode ser um caminhão guincho que está levando 3 carros. É impossível tirar o primeiro carro sem tirar os outros dois, por
+#isso ele é o último a sair da "pilha".
+
 class Pilha:
     def __init__(self):
         self.itens = []
