@@ -36,11 +36,17 @@ while True:
         print(f'{item} empilhado(a).')
 
     elif comando == 'Desempilhar':
-        desempilhar = pilha.desempilhar()
-        print(f"{desempilhar} desempilhado(a)")
+        if pilha.vazia():
+            print("A pilha está vazia")
+        else:
+            desempilhar = pilha.desempilhar()
+            print(f"{desempilhar} desempilhado(a)")
 
     elif comando == 'Topo':
-        topo = pilha.topo()
-        print(f'{topo}')
+        if pilha.vazia():
+            print("A pilha está vazia")
+        else:
+            topo = pilha.topo()
+            print(f'{topo}')
     else:
         break
