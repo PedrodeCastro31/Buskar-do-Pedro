@@ -1,5 +1,5 @@
-#Fila: É uma estrutura onde o primeiro item adcionado é o primeiro a sair. Um exemplo na vida real pode ser um pedágio, onde o
-#primeiro carro da fila será o primeiro a pagar e passar pelo pedágio.
+# Fila: É uma estrutura onde o primeiro item adcionado é o primeiro a sair. Um exemplo na vida real pode ser um pedágio, onde o
+# primeiro carro da fila será o primeiro a pagar e passar pelo pedágio.
 
 class Fila:
     

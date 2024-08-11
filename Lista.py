@@ -1,5 +1,5 @@
-#Lista são formas de organizar informações sem uma ordem de saída específica. Um exemplo na vida real pode ser uma Lista de Compras 
-#de peças automotivas, onde eu posso adcionar itens numa ordem específica e retirar qualquer um na ordem que eu quiser.
+# Lista são formas de organizar informações sem uma ordem de saída específica. Um exemplo na vida real pode ser uma Lista de Compras 
+# de peças automotivas, onde eu posso adcionar itens numa ordem específica e retirar qualquer um na ordem que eu quiser.
 
 class Lista:
 
