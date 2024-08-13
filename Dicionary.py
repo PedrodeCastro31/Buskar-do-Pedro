@@ -11,22 +11,64 @@ class Dicionary:
     def vazia(self):
         return len(self.itens) == 0
     
-    def adicionar(self, item):
-        self.itens.append(item)
+    def adicionar(self, item, chave):
+        self.itens.append({chave : item})
 
-    def remover(self, item):
+    def remover(self, chave):
         if self.vazia():
-           print("O Dicionary está vazio")
-        else:  
-            self.itens.pop(item)
+            print("O Dicionário está vazio")
+        else:
+            for i in range(len(self.itens)):
+                if chave in self.itens[i]:
+                    self.itens.pop(i)
+                    print(f"Item com a chave '{chave}' removido.")
+                    return
+            print(f"Chave '{chave}' não encontrada.")
 
     def view_dicionary(self):
         if self.vazia():
-            print("O Dicionary está vazio")
+            print("O Dicionário está vazio")
         else:
-            self.itens
+            print(f"{self.itens}")
     
-    def ind_dicionary(self, item):
+    def ind_dicionary(self, chave):
+        if self.vazia():
+            print("O Dicionário está Vazio")
+        else:
+            for dicionario in self.itens:
+                if chave in dicionario:
+                    print(f'Item com a chave "{chave}" é: {dicionario[chave]}')
+                    return
+            print(f"Chave '{chave}' não encontrada.")
+
+dicionary = Dicionary()
+
+while True:
+
+    comando = input("'Adicionar', 'Remover', 'Ver Dicionário', 'Ver item Dicionário'" )
+
+    if comando == 'Adicionar':
+        item = input('O que deseja Adicionar? ')
+        chave = input('Chave do item: ')
+        dicionary.adicionar(item, chave)
+        print(f"{item} adicionado com sucesso. {chave} atribuída.")
+    
+    elif comando == 'Remover':
+        chave = input('Chave do item para remoção:')
+        dicionary.remover(chave)
+        print(f"{item} removido.")
+    
+    elif comando == 'Ver Dicionário':
+        dicionary.view_dicionary()
+
+    elif comando == 'Ver Item Dicionário':
+        chave = input("Chave do item:")
+        dicionary.ind_dicionary(chave)
+
+    else:
+        break
+
+
         
 
 
